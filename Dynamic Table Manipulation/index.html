@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Table Manipulation</title>
+    <script>
+        function addRow() {
+            const table = document.getElementById('dynamicTable');
+            const row = table.insertRow();
+            const cell1 = row.insertCell(0);
+            const cell2 = row.insertCell(1);
+            cell1.innerHTML = document.getElementById('cell1Input').value;
+            cell2.innerHTML = document.getElementById('cell2Input').value;
+        }
+    </script>
+</head>
+<body>
+    <h1>Dynamic Table Manipulation</h1>
+    <table id="dynamicTable" border="1">
+        <tr>
+            <th>Column 1</th>
+            <th>Column 2</th>
+        </tr>
+    </table>
+    <br>
+    <input type="text" id="cell1Input" placeholder="Column 1">
+    <input type="text" id="cell2Input" placeholder="Column 2">
+    <button onclick="addRow()">Add Row</button>
+</body>
+</html>

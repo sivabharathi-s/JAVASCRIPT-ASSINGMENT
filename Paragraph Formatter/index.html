@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paragraph Formatter</title>
+    <script>
+        function formatText() {
+            const text = document.getElementById('paraText').value;
+            document.getElementById('formattedPara').innerText = text.replace(/\s+/g, ' ').trim();
+        }
+    </script>
+</head>
+<body>
+    <h1>Paragraph Formatter</h1>
+    <textarea id="paraText" rows="4" cols="50" onkeyup="formatText()"></textarea>
+    <p id="formattedPara"></p>
+</body>
+</html>

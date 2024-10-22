@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roll Number Decoder</title>
+    <script>
+        function decodeRollNumber() {
+            const rollNumber = document.getElementById('rollNumberInput').value;
+            const year = rollNumber.substring(0, 2);
+            const department = rollNumber.substring(2, 5);
+            const id = rollNumber.substring(5);
+            document.getElementById('result').innerText = `Year: 20${year}, Department: ${department}, ID: ${id}`;
+        }
+    </script>
+</head>
+<body>
+    <h1>Roll Number Decoder</h1>
+    <input type="text" id="rollNumberInput" placeholder="Enter roll number" onkeyup="decodeRollNumber()">
+    <p id="result"></p>
+</body>
+</html>

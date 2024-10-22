@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Analysis Tool</title>
+    <script>
+        function analyzeText() {
+            const text = document.getElementById('textInput').value;
+            const wordCount = text.split(/\s+/).filter(word => word.length > 0).length;
+            const charCount = text.length;
+            document.getElementById('wordCount').innerText = `Words: ${wordCount}`;
+            document.getElementById('charCount').innerText = `Characters: ${charCount}`;
+        }
+    </script>
+</head>
+<body>
+    <h1>Text Analysis Tool</h1>
+    <textarea id="textInput" rows="4" cols="50" onkeyup="analyzeText()"></textarea>
+    <p id="wordCount">Words: 0</p>
+    <p id="charCount">Characters: 0</p>
+</body>
+</html>

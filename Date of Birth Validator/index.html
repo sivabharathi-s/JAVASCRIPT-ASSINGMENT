@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date of Birth Validator</title>
+    <script>
+        function validateDOB() {
+            const dob = new Date(document.getElementById('dobInput').value);
+            const today = new Date();
+            const age = today.getFullYear() - dob.getFullYear();
+            if (age >= 18) {
+                document.getElementById('result').innerText = 'You are an adult';
+            } else {
+                document.getElementById('result').innerText = 'You are underage';
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Date of Birth Validator</h1>
+    <input type="date" id="dobInput" onchange="validateDOB()">
+    <p id="result"></p>
+</body>
+</html>
